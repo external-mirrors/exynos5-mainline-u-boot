@@ -27,7 +27,7 @@
 #include <common.h>
 #include <command.h>
 #include <hash.h>
-#include <sha1.h>
+#include <u-boot/sha1.h>
 
 int do_sha1sum(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 {

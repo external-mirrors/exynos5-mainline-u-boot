@@ -38,9 +38,9 @@ DECLARE_GLOBAL_DATA_PTR;
 #endif /* !USE_HOSTCC*/
 
 #include <bootstage.h>
-#include <sha1.h>
 #include <u-boot/crc.h>
 #include <u-boot/md5.h>
+#include <u-boot/sha1.h>
 
 /*****************************************************************************/
 /* New uImage format routines */

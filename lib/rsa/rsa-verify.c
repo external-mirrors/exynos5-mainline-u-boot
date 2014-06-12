@@ -19,11 +19,11 @@
 
 #include <common.h>
 #include <fdtdec.h>
-#include <rsa.h>
-#include <sha1.h>
 #include <asm/byteorder.h>
 #include <asm/errno.h>
 #include <asm/unaligned.h>
+#include <u-boot/rsa.h>
+#include <u-boot/sha1.h>
 
 /**
  * struct rsa_public_key - holder for a public key
