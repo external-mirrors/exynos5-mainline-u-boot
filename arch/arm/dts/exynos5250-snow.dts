@@ -312,9 +312,9 @@
 	};
 
 	mmc@12220000 {
-		bus-width = <4>;
-		samsung,dw-mshc-ciu-div = <3>;
-		samsung,dw-mshc-sdr-timing = <1 2>;
+		samsung,bus-width = <4>;
+		samsung,timing = <2 3 3>;
+		samsung,removable = <1>;
 	};
 
 	mmc@12230000 {
