@@ -12,7 +12,6 @@
 #define __CHROMEOS_CROSSYSTEM_DATA_H__
 
 #include <cros/vboot_flag.h>
-#include <vboot_nvstorage.h>
 #include <vboot_struct.h>
 
 #define ID_LEN		256
@@ -192,7 +191,7 @@ assert_offset(vb_shared_data,			0x0400);
  * used by crossystem. Note that:
  * - It does not initialize information of the main firmware, e.g., fwid. This
  *   information must be initialized in subsequent calls to the setters below.
- * - The recovery reason is default to VBNV_RECOVERY_NOT_REQUESTED.
+ * - The recovery reason is default to VB2_RECOVERY_NOT_REQUESTED.
  *
  * @param cdata is the data blob shared with crossystem
  * @param write_protect_switch points to a GPIO descriptor
