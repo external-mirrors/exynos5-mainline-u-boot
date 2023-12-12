@@ -111,7 +111,6 @@
 		"stdout=serial,lcd\0" \
 		"stderr=serial,lcd\0"
 
-#define CONFIG_SILENT_CONSOLE
 #define CONFIG_CONSOLE_RECORDING
 #define CONFIG_RECORDED_CONSOLE_SIZE 30000
 
