@@ -152,7 +152,7 @@
 #define CONFIG_CMD_GPIO
 #define CONFIG_CMD_CACHE
 
-#define CONFIG_BOOTDELAY		0
+#define CONFIG_BOOTDELAY		4
 
 /* Thermal Management Unit */
 #define CONFIG_EXYNOS_TMU
