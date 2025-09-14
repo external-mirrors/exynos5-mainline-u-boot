@@ -62,3 +62,16 @@ config SYS_CONFIG_NAME
 	default "smdk5420"
 
 endif
+
+if TARGET_V1A_WIFI
+
+config SYS_BOARD
+	default "smdk5420"
+
+config SYS_VENDOR
+	default "samsung"
+
+config SYS_CONFIG_NAME
+	default "v1a_wifi"
+
+endif
