@@ -1,0 +1,78 @@
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * Base DT for Samsung's family of tablets based on Exynos5420.
+ *
+ * Copyright (c) 2025 Hendrik Noack
+ */
+
+/dts-v1/;
+#include "exynos54xx.dtsi"
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/clock/maxim,max77802.h>
+#include <dt-bindings/regulator/maxim,max77802.h>
+
+/ {
+	aliases {
+		serial2 = "/serial@12C20000";
+		console = "/serial@12C20000";
+	};
+
+	chosen {
+		stdout-path = "serial2:115200n8";
+	};
+
+	gpio-keys {
+		compatible = "gpio-keys";
+
+		key-power {
+			debounce-interval = <10>;
+			gpios = <&gpx2 2 GPIO_ACTIVE_LOW>;
+			label = "Power";
+			linux,code = <KEY_POWER>;
+			wakeup-source;
+		};
+
+		key-home {
+			debounce-interval = <10>;
+			gpios = <&gpx0 5 GPIO_ACTIVE_LOW>;
+			label = "Home";
+			linux,code = <KEY_HOME>;
+			wakeup-source;
+		};
+
+		key-volume-up {
+			debounce-interval = <10>;
+			gpios = <&gpx0 2 GPIO_ACTIVE_LOW>;
+			label = "Volume Up";
+			linux,code = <KEY_VOLUMEUP>;
+		};
+
+		key-volume-down {
+			debounce-interval = <10>;
+			gpios = <&gpx0 3 GPIO_ACTIVE_LOW>;
+			label = "Volume Down";
+			linux,code = <KEY_VOLUMEDOWN>;
+		};
+	};
+
+	i2c@12CD0000 { /* i2c7 */
+		clock-frequency = <400000>;
+		pmic@9 {
+			compatible = "maxim,max77802";
+			reg = <0x9>;
+		};
+	};
+
+	tmu@10060000 {
+		samsung,min-temp	= <25>;
+		samsung,max-temp	= <125>;
+		samsung,start-warning	= <95>;
+		samsung,start-tripping	= <105>;
+		samsung,hw-tripping	= <110>;
+		samsung,efuse-min-value	= <40>;
+		samsung,efuse-value	= <55>;
+		samsung,efuse-max-value	= <100>;
+		samsung,slope		= <274761730>;
+		samsung,dc-value	= <25>;
+	};
+};
