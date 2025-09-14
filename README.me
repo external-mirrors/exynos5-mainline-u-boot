@@ -1,0 +1,8 @@
+Build on linux mint through:
+
+sudo apt install gcc-arm-linux-gnueabihf bc bison build-essential coccinelle device-tree-compiler dfu-util efitools flex gdisk graphviz imagemagick liblz4-tool libgnutls28-dev libguestfs-tools libncurses-dev libpython3-dev libsdl2-dev libssl-dev lz4 lzma lzma-alone openssl pkg-config python3 python3-asteval python3-coverage python3-filelock python3-pkg-resources python3-pycryptodome python3-pyelftools python3-pytest python3-pytest-xdist python3-sphinxcontrib.apidoc python3-sphinx-rtd-theme python3-subunit python3-testtools python3-virtualenv swig uuid-dev
+CROSS_COMPILE=arm-linux-gnueabihf- make v1a_wifi_defconfig / n2awifi_defconfig
+CROSS_COMPILE=arm-linux-gnueabihf- make -j4
+
+Copy u-boot.bin into pmbootstrap chroot_native and execute apk add android-tools.
+Then in pmbootstrap chroot execute mkbootimg --base 0x10000000 --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --pagesize 2048 --second_offset 0x00f00000 --kernel u-boot.bin -o u-boot.img && printf "SEANDROIDENFORCE" >> u-boot.img and flash u-boot.img with heimdall to boot partition afterwards.
