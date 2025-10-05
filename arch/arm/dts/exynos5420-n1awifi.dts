@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * Samsung's Exynos5420 Galaxy Note 10.1 (2014) WiFi board device tree source
+ *
+ * Copyright (c) 2025 Hendrik Noack
+ */
+
+/dts-v1/;
+#include "exynos5420-galaxy-tab-common.dtsi"
+
+/ {
+	model = "Samsung Galaxy Note 10.1 (2014) WiFi based on Exynos5420";
+	compatible = "samsung,n1awifi", "samsung,exynos5420", \
+			"samsung,exynos5";
+};

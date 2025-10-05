@@ -1,3 +1,16 @@
+if TARGET_N1AWIFI
+
+config SYS_BOARD
+	default "smdk5420"
+
+config SYS_VENDOR
+	default "samsung"
+
+config SYS_CONFIG_NAME
+	default "n1awifi"
+
+endif
+
 if TARGET_N2AWIFI
 
 config SYS_BOARD
