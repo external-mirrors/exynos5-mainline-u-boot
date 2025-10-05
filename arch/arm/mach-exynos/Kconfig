@@ -143,6 +143,12 @@ config TARGET_ARNDALE
 	select OF_CONTROL
 	select SUPPORT_SPL
 
+config TARGET_N1AWIFI
+	bool "N1A WiFi board"
+	select EXYNOS5_DT
+	select EXYNOS5420
+	select OF_CONTROL
+
 config TARGET_N2AWIFI
 	bool "N2A WiFi board"
 	select EXYNOS5_DT
