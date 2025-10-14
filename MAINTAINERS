@@ -613,6 +613,11 @@ F:	drivers/clk/exynos/clk-exynos850.c
 F:	drivers/phy/phy-exynos-usbdrd.c
 F:	drivers/pinctrl/exynos/pinctrl-exynos850.c
 
+ARM SAMSUNG EXYNOS5250 SOC
+M:	Lukas Timmermann <uboot@timmermann.space>
+S:	Maintained
+F:	drivers/pinctrl/exynos/pinctrl-exynos5250.c
+
 ARM SAMSUNG SOC DRIVERS
 M:	Sam Protsenko <semen.protsenko@linaro.org>
 S:	Maintained
