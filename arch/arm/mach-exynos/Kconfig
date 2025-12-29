@@ -110,6 +110,9 @@ config EXYNOS5250
 
 config EXYNOS5420
 	bool
+	select ARM_CORTEX_A15_CVE_2017_5715
+	select ARM_ERRATA_798870
+	select ARM_ERRATA_801819
 
 config EXYNOS5_DT
 	bool
