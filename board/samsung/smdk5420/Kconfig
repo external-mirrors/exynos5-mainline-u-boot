@@ -1,5 +1,8 @@
 if TARGET_N1AWIFI
 
+config ENV_SOURCE_FILE
+	default "galaxy-tab-pro"
+
 config SYS_BOARD
 	default "smdk5420"
 
@@ -12,6 +15,9 @@ config SYS_CONFIG_NAME
 endif
 
 if TARGET_N2AWIFI
+
+config ENV_SOURCE_FILE
+	default "galaxy-tab-pro"
 
 config SYS_BOARD
 	default "smdk5420"
@@ -77,6 +83,9 @@ config SYS_CONFIG_NAME
 endif
 
 if TARGET_V1A_WIFI
+
+config ENV_SOURCE_FILE
+	default "galaxy-tab-pro"
 
 config SYS_BOARD
 	default "smdk5420"

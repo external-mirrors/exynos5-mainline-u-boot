@@ -18,7 +18,32 @@
 	};
 
 	chosen {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
 		stdout-path = "serial2:115200n8";
+
+		framebuffer0: framebuffer@67000000 {
+			compatible = "simple-framebuffer";
+			reg = <0x67000000 (2560 * 1600 * 4)>;
+			width = <2560>;
+			height = <1600>;
+			rot = <0>;
+			stride = <(2560 * 4)>;
+			format = "x8r8g8b8";
+		};
+	};
+
+	reserved-memory {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		ranges;
+
+		framebuffer@67000000 {
+			reg = <0x67000000 (2560 * 1600 * 4)>;
+			no-map;
+		};
 	};
 
 	gpio-keys {
