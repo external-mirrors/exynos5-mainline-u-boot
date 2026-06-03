@@ -353,7 +353,6 @@ static const struct udevice_id exynos_gpio_ids[] = {
 	{ .compatible = "samsung,s5pc110-pinctrl" },
 	{ .compatible = "samsung,exynos4210-pinctrl" },
 	{ .compatible = "samsung,exynos4x12-pinctrl" },
-	{ .compatible = "samsung,exynos5250-pinctrl" },
 	{ .compatible = "samsung,exynos5420-pinctrl" },
 	{ .compatible = "samsung,exynos78x0-gpio" },
 	{ }
