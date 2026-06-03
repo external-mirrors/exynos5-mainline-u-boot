@@ -831,3 +831,5 @@
 		samsung,pin-drv = <EXYNOS4_PIN_DRV_LV1>;
 	};
 };
+
+#include "exynos5250-pinctrl-u-boot.dtsi"
