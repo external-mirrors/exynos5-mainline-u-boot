@@ -117,6 +117,15 @@ int board_init(void)
 	gd->ram_size -= size;
 	gd->bd->bi_dram[CONFIG_NR_DRAM_BANKS - 1].size -= size;
 #endif
+#if CONFIG_IS_ENABLED(VIDEO_DT_SIMPLEFB)
+	/*
+	 * Samsung S-BOOT enables HW triggering on some boards. Because of this FB memorey isn't
+	 * continously read.
+	 * HW trigger can be disabled by writing 0 to TRIGCON register of FIMD
+	 */
+	if (of_machine_is_compatible("samsung,chagall-wifi"))
+		writel(0, 0x144201A4);
+#endif
 	exynos_init();
 
 	return 0;
