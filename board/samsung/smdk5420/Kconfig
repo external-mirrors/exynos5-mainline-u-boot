@@ -1,3 +1,19 @@
+if TARGET_CHAGALL_WIFI
+
+config ENV_SOURCE_FILE
+	default "galaxy-tab-pro"
+
+config SYS_BOARD
+	default "smdk5420"
+
+config SYS_VENDOR
+	default "samsung"
+
+config SYS_CONFIG_NAME
+	default "chagall_wifi"
+
+endif
+
 if TARGET_N1AWIFI
 
 config ENV_SOURCE_FILE
